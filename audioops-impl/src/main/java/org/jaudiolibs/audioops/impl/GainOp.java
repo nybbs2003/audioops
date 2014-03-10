@@ -51,7 +51,15 @@ public class GainOp implements AudioOp {
     private float oldGain = 0;
     
 
-    public void setGain(float gain) {
+    public GainOp() {
+	}
+
+	public GainOp(float gain) {
+		super();
+		this.gain = gain;
+	}
+
+	public void setGain(float gain) {
         if (gain < 0) {
             throw new IllegalArgumentException();
         }
