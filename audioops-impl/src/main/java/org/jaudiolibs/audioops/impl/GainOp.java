@@ -71,7 +71,7 @@ public class GainOp implements AudioOp {
     }
 
     public void reset(int samples) {
-        oldGain = 0;
+        oldGain = gain;
     }
 
     public void processReplace(int buffersize, float[][] outputs, float[][] inputs) {
